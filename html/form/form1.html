@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form 태그 : 사용자로부터 입력을 받기 위한 양식을 작성하는 태그 
+        - action : 전송한 정보를 처리할 경로
+        - method : 정보를 서버로 전송할 때 사용하는 방식 지정(get, post) 
+        - autocomplete = "off" (기본값은 on) : 입력 폼에 값을 보이게 할 거냐? (자동완성기능 쓸거냐)
+
+        get 방식 (form 안에 입력한 값이 주소줄에 그대로 보임)
+        시작 : http://121.160.42.70:5500/basic/form1.html
+        제출 : http://121.160.42.70:5500/basic/form1.html?name=%EB%B0%95%EC%A4%80&age=35
+
+        post 방식 : 입력한 값이 주소줄에 보이지 않음
+
+        1) type="submit" : form 안 요소들을 action이 지정한 곳으로 전송
+        2) type="reset" : form 안 요소들을 초기화함
+        3) <label for=""> : 제목 텍스트 
+            - for 속성에 input 태그에 부여한 id 속성값과 동일한 값을 사용
+            - input 속성에 포커스를 줄 수 있음
+        4) type="text" : 짧은 text 입력 시 사용
+        5) type="number" : 숫자만 입력
+        6) type="password" : 비밀번호
+        7) type="search" : 검색 (x 버튼 활성화)
+        8) type="tel" : 전화번호
+          - pattern 속성값을 이용해서 원하는 입력형식 지정
+        9) type="number", type="range", type="date"
+          - range 타입은 그 자체로는 의미가 없음(선택 값 표시 X => 자바스크립트 이용)
+        10) 체크관련 : checkbox, radio
+          - checkbox : 사용자로부터 여러개 선택을 받는 경우 사용
+          - radio : 사용자로부터 하나의 선택을 받는 경우 사용
+          - value 속성은 무조건 필요
+        11) type="file" : 파일첨부
+          - accept : 첨부파일 제한
+          - multiple : 여러 개 파일 첨부
+        12) type="email" : 이메일
+          - 이메일 형식을 확인(자세히는 안함)
+        13) type="hidden" : 화면에 요소 안보임
+
+        기타 입력 요소
+        1) textarea : 여러 줄 입력 0요구
+          cols, rows, 정해진 rows를 넘어가는 입력 발생 시 자동으로 스크롤 생김
+        2) select + option
+          - selected (기본 선택)
+        3) select + optiongroup + option
+          - optiongroup : 1차 분류
+        4) datalist
+
+        속성
+        1) 텍스트 요소
+          - pattern
+          - placeholder : 입력 시 안내 사항
+          - min, maxlength : 최소, 최대 입력 길이 지정
+        2) 숫자 요소
+          - max, min, step
+        3) 공통 속성
+          - value : 특정 요소에 값을 미리 생성
+          - readonly : 읽기만 가능 (수정 불가)
+          - required : 필수 입력 요구
+          - autofocus : 자동으로 특정 요소가 선택되도록
+          - disabled : 특정 요소를 비활성화
+    -->
+    <h2>
+      <form action="" method="get" autocomplete="off">
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" />
+        <label for="age">나이</label>
+        <input type="number" name="age" id="age" />
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+      </form>
+    </h2>
+  </body>
+</html>

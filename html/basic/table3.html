@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 셀 병합 
+      1. 열 병합 : colspan
+      2. 행 병합 : rowspan 
+    -->
+    <table border="1">
+      <caption>
+        1 ~ 9
+      </caption>
+      <tr>
+        <td>1</td>
+        <td colspan="2">2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td rowspan="2">6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+    </table>
+  </body>
+</html>

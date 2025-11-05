@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table (표) 
+        - caption : 표 제목
+        - tr : 행
+        - td : 열 
+        - th : 제목 열(글자 굵게, 가운데 정렬 자동)
+            - scope : th 태그가 어떤 것의 제목인지 지정
+        - thead, tbody, tfoot : 테이블 세 부분으로 나누어 지정할 때 사용
+        table>caption+(tr>td*3)*3
+    -->
+    <table border="1">
+      <caption>
+        1 ~ 9
+      </caption>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>체크 관련 input 요소</h1>
+    <form action="" method="get">
+      <div>
+        <input type="checkbox" name="fruit" id="apple1" checked value="사과" />
+        <label for="apple1">사과</label>
+        <input type="checkbox" name="fruit" id="grape1" value="포도" />
+        <label for="grape1">포도</label>
+        <input type="checkbox" name="fruit" id="orange1" value="오렌지" />
+        <label for="orange1">오렌지</label>
+        <input type="checkbox" name="fruit" id="strawberry1" value="딸기" />
+        <label for="strawberry1">딸기</label>
+      </div>
+      <div>
+        <input type="radio" name="vege" id="apple2" checked value="사과1" />
+        <label for="apple2">사과</label>
+        <input type="radio" name="vege" id="grape2" value="포도1" />
+        <label for="grape2">포도</label>
+        <input type="radio" name="vege" id="orange2" value="오렌지1" />
+        <label for="orange2">오렌지</label>
+        <input type="radio" name="vege" id="strawberry2" value="딸기1" />
+        <label for="strawberry2">딸기</label>
+      </div>
+      <button type="submit">제출</button>
+    </form>
+    <h1>기타 input 요소</h1>
+    <form action="" method="get">
+      <div>
+        <label for="file">file</label>
+        <input
+          type="file"
+          name="file"
+          id="file"
+          accept="image/png,image/jpeg"
+          multiple
+        />
+      </div>
+      <div>
+        <label for="hidden">hidden</label>
+        <input type="hidden" name="hidden" id="hidden" />
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

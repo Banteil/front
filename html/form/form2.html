@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form 태그 : 사용자로부터 입력을 받기 위한 양식을 작성하는 태그 
+        - action : 전송한 정보를 처리할 경로
+        - method : 정보를 서버로 전송할 때 사용하는 방식 지정(get, post) 
+        - autocomplete = "off" (기본값은 on) : 입력 폼에 값을 보이게 할 거냐? (자동완성기능 쓸거냐)
+
+        get 방식 (form 안에 입력한 값이 주소줄에 그대로 보임)
+        시작 : http://121.160.42.70:5500/basic/form1.html
+        제출 : http://121.160.42.70:5500/basic/form1.html?name=%EB%B0%95%EC%A4%80&age=35
+
+        post 방식 : 입력한 값이 주소줄에 보이지 않음
+
+        1) type="submit" : form 안 요소들을 action이 지정한 곳으로 전송
+        2) type="reset" : form 안 요소들을 초기화함
+        3) <label for=""> : 제목 텍스트 
+            - for 속성에 input 태그에 부여한 id 속성값과 동일한 값을 사용
+            - input 속성에 포커스를 줄 수 있음
+        4) type="text" : 짧은 text 입력 시 사용
+        5) type="number" : 숫자만 입력
+
+        fieldset : 그룹화하기
+        legend : 그룹화 제목
+    -->
+    <h2>
+      <form action="" method="get" autocomplete="off">
+        <fieldset>
+          <legend>반장</legend>
+          <div>
+            <label for="name1">이름</label>
+            <input type="text" name="name1" id="name1" />
+          </div>
+          <div>
+            <label for="age1">나이</label>
+            <input type="number" name="age1" id="age1" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>부반장</legend>
+          <div>
+            <label for="name2">이름</label>
+            <input type="text" name="name2" id="name2" />
+          </div>
+          <div>
+            <label for="age2">나이</label>
+            <input type="number" name="age2" id="age2" />
+          </div>
+        </fieldset>
+        <fieldset disabled>
+          <legend>서기</legend>
+          <div>
+            <label for="name3">이름</label>
+            <input type="text" name="name3" id="name3" />
+          </div>
+          <div>
+            <label for="age3">나이</label>
+            <input type="number" name="age3" id="age3" />
+          </div>
+        </fieldset>
+
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+      </form>
+    </h2>
+  </body>
+</html>
