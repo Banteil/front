@@ -1,0 +1,21 @@
+/* 10. 가상 요소 선택자 */
+h1::before {
+  content: "before ";
+  color: red;
+}
+
+h1::after {
+  content: " 가상요소";
+  color: blue;
+}
+
+/* 11. 구조 선택자 */
+ol li:first-of-type {
+  color: red;
+}
+ol li:last-of-type {
+  color: blue;
+}
+ol li:nth-of-type(3) {
+  color: orange;
+}

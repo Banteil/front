@@ -1,0 +1,13 @@
+.letter {
+  /* 자간, 글자간격 */
+  /* letter-spacing: 0.5em; */
+
+  /* 줄간간격 */
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.word {
+  /* 단어간격 */
+  word-spacing: 0.5em;
+}

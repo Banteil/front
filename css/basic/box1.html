@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box1</title>
+    <link rel="stylesheet" href="./box1.css" />
+  </head>
+  <body>
+    <!-- 
+        블록(block) 요소 : 하나의 행 부여
+            - h1~6, p, div, table
+            - width : 100%로 시작해서 크기 지정
+            - height : 내용만큼만 시작해서 크기 지정 가능
+        인라인 요소 : 내용만큼만 사용
+            - width, height : 지정불가
+
+        마진
+            - 블록요소는 상하좌우
+            - 인라인요소는 좌우에만 여백
+        패딩
+            - 인라인, 블록요소가 섞이는 경우 패딩은 블록요소에 적용이 되나
+            상하공간은 다른 요소를 밀어내지 않기 떄문에 불완전하게 적용이 된다
+
+        마진중복(병합)
+        1. 형제요소들의 margin-top과 margin-bottom이 만났을 때
+        2. 부모요소의 margin-top과 자식 요소의 margin-top 만났을 때
+        3. 부모요소의 amrgin-bottom과 자식 요소의 
+    -->
+    <h1>블록요소</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sit quas
+      nihil suscipit porro tempore optio nisi, ullam reprehenderit ea maiores
+      asperiores eveniet quia ipsum modi consequuntur eum! Libero ut labore
+      repudiandae, fugiat ab commodi? Vero, ipsa neque voluptates autem at
+      repellendus fuga, vel commodi numquam nisi nihil optio dignissimos!
+    </p>
+    <span>인라인요소</span>
+    <input type="text" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <label for="">사과</label>
+    <img src="https://placehold.co/100" alt="" />
+    <img src="https://placehold.co/200" alt="" />
+    <table>
+      <tr>
+        <td>테이블</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>테이블</td>
+      </tr>
+    </table>
+  </body>
+</html>

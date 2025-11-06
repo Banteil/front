@@ -1,0 +1,19 @@
+ul {
+  list-style: square;
+}
+
+ul > li:first-child {
+  list-style: "☞ ";
+}
+
+ol {
+  /* upper(lower)-alpha 
+    upper(lower)-roman
+    decimal(기본값)
+    */
+  list-style: upper-roman;
+}
+
+ul {
+  list-style: none;
+}

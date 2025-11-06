@@ -24,3 +24,10 @@ p.blue.dark {
 #red {
   color: tomato;
 }
+
+/* 5. 그룹 선택자 */
+span,
+.dark,
+#red {
+  text-decoration: underline;
+}

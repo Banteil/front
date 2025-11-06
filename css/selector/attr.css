@@ -1,0 +1,49 @@
+/* 12. 속성 선택자 
+    [속성명], [속성명=값]
+    [속성명^=값] : 값으로 시작하는
+    [속성명$=값] : 값으로 끝나는
+    [속성명~=값] : 값을 포함하고 있는
+    [속성명*=값] : 특정 값을 포함하고 있는
+    [속성명|=값] : 값에 -가 있는 경우
+*/
+
+[target] {
+  text-decoration: none;
+}
+
+[target="_blank"] {
+  color: yellowgreen;
+}
+
+/* Success, Danger : 글자 굵게, 버튼 테두리 둥글게, 안쪽 여백 */
+/* .btn-success,
+.btn-danger {
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+} */
+
+/* [class^="btn"] {
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+} */
+
+[class|="btn"] {
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+[class~="test"] {
+  padding: 10px;
+}
+
+[class*="fr"] {
+  color: red;
+}
+
+[class$="name"] {
+  color: brown;
+  font-weight: bold;
+}

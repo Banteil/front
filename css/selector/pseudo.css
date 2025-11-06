@@ -1,0 +1,98 @@
+/* 
+    자식 : 특정 요소 바로 밑에 존재하는 태그요소 
+    | - ex) html 자식 : head, body
+    자손 : 자식 + 손주 (하위요소 모두)
+    | - ex) html 자손 : head, body, meta, title, link, ul, li...
+*/
+
+/* 6. 자손 결합자 : 부모요소 자손요소 사이에 공백 */
+.outer li {
+  color: olivedrab;
+}
+
+/* 7. 자식 결합자 : > */
+.outer > li {
+  color: dodgerblue;
+}
+
+.outer > li li {
+  text-decoration: underline;
+}
+
+/* 8. 형제 결합자 : ~, + 
+    ~ : 뒤따르는 모든 요소들
+    + : 바로 다음 요소만
+*/
+.starter ~ li {
+  font-style: italic;
+}
+
+.starter + li {
+  font-weight: bold;
+}
+
+/* 9. 가상 클래스 : 특정 상황을 가정하고 이름을 붙임
+    :first-child
+    :last-child
+    :nth-child(n) : n번째에 해당하는 자손 요소 선택
+    :nth-child(2n) : 짝수에 해당하는 자손 요소 선택
+    :nth-child(even) : 짝수에 해당하는 자손 요소 선택
+    :nth-child(odd) : 홀수에 해당하는 자손 요소 선택
+    :hover : 마우스가 오버될 때
+
+    a:link => 방문하지 않은 링크에 스타일 적용
+    a:visited => 방문한 링크에 스타일 적용
+    a:active => 활성화 했을 때 스타일 적용 (클릭 유지 시 등)
+*/
+ol li:first-child,
+ol li:last-child {
+  color: yellowgreen;
+}
+
+.outer > li:not(:last-child) {
+  text-decoration: line-through;
+}
+
+ol li:nth-child(3) {
+  font-weight: bold;
+  color: deeppink;
+}
+
+/* ol li:nth-child(2n) {
+  background-color: antiquewhite;
+} */
+
+ol li:nth-child(even) {
+  background-color: antiquewhite;
+}
+/* 
+ol li:nth-child(odd) {
+  background-color: aqua;
+} */
+/* 
+ol li:nth-child(2n + 1) {
+  background-color: aqua;
+} */
+
+li:hover {
+  font-weight: bold;
+  color: blue;
+}
+
+div a:link {
+  text-decoration: none;
+  color: black;
+}
+div a:active {
+  text-decoration: none;
+  color: red;
+}
+div a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+div a:hover {
+  text-decoration: underline;
+  color: red;
+}

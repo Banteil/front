@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  display: inline-block;
+  margin-right: 2em;
+  border-bottom: 2px dashed darkorange;
+
+  /* border-width: 5px 10px;
+  border-style: dashed dotted;
+  border-color: darkmagenta darkcyan darkkhaki; */
+}
+
+p {
+  display: inline-block;
+  /* 상하 : 8px, 좌우 : 16px */
+  /* margin: 8px 16px; */
+  /* 시계방향 상:8px, 우:6px, 하:12px, 좌:6px */
+  margin: 8px 6px 12px;
+  /* 시계방향 상:10px, 우:8px, 하:6px, 좌:4px */
+  padding: 10px 8px 6px 4px;
+}
