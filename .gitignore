@@ -50,6 +50,7 @@ $RECYCLE.BIN/
 # Persoanl Setting
 *.zip
 front/html/img/*
+front/css/img/*
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 
