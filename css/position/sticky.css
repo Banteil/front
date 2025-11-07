@@ -1,0 +1,15 @@
+/* 
+    - position: sticky
+    1) 기준 : 스크롤 영역
+    2) 위치 : top, bottom, left, right
+*/
+
+.section {
+  height: 200px;
+  border: 4px dashed lightgray;
+}
+
+.section h1 {
+  position: sticky;
+  top: 0;
+}

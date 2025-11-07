@@ -1,0 +1,7 @@
+p {
+  background-color: rgb(127, 255, 212);
+  /* color: #000; #000000 */
+  /* color: rgb(255, 255, 255); */
+  /* color: rgba(128, 0, 0, 0.3); */
+  color: hsl(120, 0, 100%);
+}

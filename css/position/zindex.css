@@ -1,0 +1,38 @@
+/* 
+    - z-index : 요소 쌓임 순서 지정
+        - static인 경우는 태그 작성 순서
+        - static을 제외한 position 속성을 가지고 있는 경우 : 해당 요소가 가장 위
+        - position 속성의 값이 모두 존재 시 z-index 속성의 값이 높을수록 위
+        - z-index도 동일하면 태그 작성 순서대로 쌓임
+*/
+
+.box-group {
+  position: relative;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.box1 {
+  background-color: red;
+  left: 50px;
+  top: 50px;
+  z-index: 20;
+}
+
+.box2 {
+  background-color: yellow;
+  left: 110px;
+  top: 70px;
+  z-index: 10;
+}
+
+.box3 {
+  background-color: green;
+  left: 70px;
+  top: 110px;
+}

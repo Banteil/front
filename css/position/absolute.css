@@ -1,0 +1,63 @@
+body {
+  padding-top: 100px;
+}
+
+.container {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: yellow;
+  position: relative;
+}
+
+/* 
+    position: absolute
+    1) 기준 : viewport(지정하지 않는 경우)
+              static이 아닌 부모 요소 지정하면 기준이 변경
+              부모 요소는 대부분 position: relative로 사용
+*/
+
+.box {
+  /* width: 100px; */
+  height: 100px;
+  position: absolute;
+}
+
+/* .a {
+  background-color: red;
+  left: 0;
+  top: 0;
+}
+
+.b {
+  background-color: green;
+  right: 0px;
+  top: 0px;
+}
+
+.c {
+  background-color: blue;
+  right: 0px;
+  bottom: 0px;
+} */
+
+.a {
+  background-color: red;
+  left: 0;
+  top: 50%;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+.b {
+  background-color: green;
+  right: 50%;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.c {
+  background-color: blue;
+  right: 0;
+  top: 50%;
+  transform: translateX(100%) translateY(-50%);
+}

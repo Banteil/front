@@ -1,0 +1,13 @@
+.outer {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  border-radius: 50%;
+  overflow: auto;
+}
+
+.with-bg {
+  height: 100%;
+  background-image: url(../img/mona-lisa.jpg);
+  background-size: cover;
+}

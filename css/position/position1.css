@@ -1,0 +1,18 @@
+.lastest-news {
+  border: 2px solid #ccc;
+  width: 350px;
+  height: 145px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.read-more {
+  background-color: #000;
+  color: white;
+  line-height: 30px;
+  padding: 0 10px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 7px);
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+    position: relative;
+    1) 기준 : 원래 있던 위치
+    2) 위치 : 위치 지정 필요 : top, bottom, left, right
+    3) 다른 요소에 영향 주지 않음
+*/
+
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  position: relative;
+}
+
+.a {
+  background-color: blue;
+  left: 50px;
+  top: 50px;
+}
+
+.b {
+  background-color: red;
+  left: 50px;
+  top: 50px;
+}

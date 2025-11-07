@@ -1,0 +1,36 @@
+body {
+  border: 2px solid black;
+  height: 500px;
+}
+
+.slide {
+  border: 2px solid green;
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.slide img {
+  width: 300px;
+  height: 200px;
+  float: left;
+}
+
+.controls a {
+  background-color: #333;
+  line-height: 50px;
+  color: white;
+  position: absolute;
+  top: calc(50% - 25px);
+  white-space: nowrap;
+}
+
+.prev {
+  right: 100%;
+}
+
+.next {
+  left: 100%;
+}

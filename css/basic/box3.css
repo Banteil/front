@@ -23,7 +23,7 @@ div {
   height: 300px;
   color: white;
   font-size: 5em;
-  text-align: center;
+  /* text-align: center; */
   border: 2px solid black;
   border-radius: 50%;
   /* line-height: 300px;*/
