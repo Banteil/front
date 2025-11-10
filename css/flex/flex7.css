@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 60rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.flexbg {
+  display: flex;
+}
+
+.flexbg main {
+  order: 2;
+  background-color: #fff;
+  width: 60%;
+  padding: 1.618rem;
+}
+
+.flexbg .sidebar {
+  width: 20%;
+  padding: 1.618rem;
+}
+
+.flexbg .left {
+  order: 1;
+  background-color: #3498db;
+}
+
+.flexbg .right {
+  order: 3;
+  background-color: #34495e;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 767px) {
+  .flexbg {
+    flex-wrap: wrap;
+  }
+
+  .flexbg main {
+    order: 1;
+    width: 100%;
+  }
+
+  .flexbg .sidebar {
+    width: 50%;
+  }
+
+  .flexbg .left {
+    order: 2;
+  }
+}
+
+/* 핸드폰 */
+@media screen and (max-width: 480px) {
+  .flexbg .sidebar {
+    width: 100%;
+  }
+}

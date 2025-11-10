@@ -1,0 +1,11 @@
+table {
+  border: 2px solid gray;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  caption-side: bottom;
+}
+
+th,
+td {
+  border: 2px solid lightgray;
+}

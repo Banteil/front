@@ -1,0 +1,40 @@
+/* 
+    요소 감추기
+    1. visibility : hidden
+        요소는 안보이지만 자리는 차지
+    2. display : none
+        요소도 자리도 없음
+*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.container div:first-child {
+  background-color: tomato;
+}
+
+.container div:nth-child(2) {
+  background-color: blue;
+  display: none;
+}
+
+.container div:nth-child(3) {
+  background-color: rebeccapurple;
+  visibility: hidden;
+}
+
+.container div:last-child {
+  background-color: red;
+}
+/* 
+flex 수평배치
+배경색지정
+*/

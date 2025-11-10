@@ -1,0 +1,25 @@
+[type="radio"]:disabled + label {
+  color: gray;
+  text-decoration: line-through;
+}
+
+[type="radio"]:enabled + label {
+  color: black;
+  text-decoration: underline;
+}
+
+[type="radio"]:checked + label {
+  color: tomato;
+}
+
+[type="text"]:focus {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: orange;
+  /* outline: none; */
+  outline: 2px solid darkblue;
+}
+
+[type="text"]:required {
+  border-color: blueviolet;
+}

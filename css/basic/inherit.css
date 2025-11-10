@@ -1,0 +1,33 @@
+/* css 상속
+    c : cascading
+    상속
+    글자관련 속성들이 주로 상속됨
+    - color, font-*, text-align, text-decoration, visibility...
+
+
+    우선순위
+    1. 명시도 점수가 높은 선언이 우선
+        !important > 인라인 선언 > 아이디 선택자 
+        > 클래스 선택자 > 태그 선택자 > 전체(*) > 상속
+    2. 명시도가 같을 시 나중에 작성한 것이 우선
+*/
+
+.ecosystem {
+  color: red;
+}
+
+.animal {
+  color: darkblue;
+}
+
+#text {
+  color: brown;
+}
+
+.area p {
+  color: blueviolet;
+}
+
+p {
+  color: aquamarine;
+}

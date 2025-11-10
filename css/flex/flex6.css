@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333338;
+  font-size: 16px;
+  color: #444;
+}
+
+.container {
+  display: flex;
+}
+
+.main-content,
+.sidebar {
+  margin: 10px;
+  background-color: #eee;
+  padding: 6px;
+}
+
+.panel {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  /* flex-wrap: wrap;
+  align-content: space-between; */
+  flex-direction: column;
+  justify-content: space-between;
+}
