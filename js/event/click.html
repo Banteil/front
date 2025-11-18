@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click</title>
+  </head>
+  <body>
+    <button type="button" id="hi">클릭1</button>
+    <button type="button" id="bye">클릭2</button>
+    <script>
+      function showDialog(type) {
+        alert(type == 1 ? "ㅎㅇ" : "ㅂㅇ");
+      }
+
+      const btns = document.querySelectorAll("button");
+      btns[0].addEventListener("click", () => {
+        showDialog(1);
+      });
+      btns[1].addEventListener("click", () => {
+        showDialog(2);
+      });
+    </script>
+  </body>
+</html>

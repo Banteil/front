@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom2</title>
+  </head>
+  <body>
+    <div>시작</div>
+    <ul>
+      <li><b>항목</b></li>
+    </ul>
+    <div>끝</div>
+    <script>
+      // body 안의 모든 자식요소 출력
+      var childs = document.body.childNodes;
+      for (let i = 0; i < childs.length; i++) {
+        console.log(childs[i]);
+      }
+
+      console.log("parentNode", document.body.parentNode);
+      console.log("parentElement", document.body.parentElement);
+      console.log("firstChild", document.body.firstChild);
+      console.log("firstElementChild", document.body.firstElementChild);
+      console.log("lastChild", document.body.lastChild);
+      console.log("lastElementChild", document.body.lastElementChild);
+      console.log("nextSibling", document.body.nextSibling);
+      console.log("nextElementSibling", document.body.nextElementSibling);
+      console.log("previousSibling", document.body.previousSibling);
+      console.log(
+        "previousElementSibling",
+        document.body.previousElementSibling
+      );
+    </script>
+  </body>
+</html>

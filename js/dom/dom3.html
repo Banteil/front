@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom3</title>
+  </head>
+  <body>
+    <div>시작</div>
+    <ul>
+      <li><b>항목</b></li>
+    </ul>
+    <div>끝</div>
+    <script>
+      // body 안의 모든 자식요소 출력
+      var childs = document.body.children;
+      for (let i = 0; i < childs.length; i++) {
+        console.log(childs[i].tagName, childs[i]);
+      }
+    </script>
+  </body>
+</html>

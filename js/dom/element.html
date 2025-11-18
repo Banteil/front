@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element</title>
+  </head>
+  <body>
+    <h1 id="header" class="header"><i>헤더 요소</i></h1>
+    <ul>
+      <li class="item">목록1</li>
+      <li class="item">목록2</li>
+      <li class="item">목록3</li>
+      <li class="item">목록4</li>
+    </ul>
+    <button type="button">변경</button>
+    <script>
+      //조건이 여러개 충족되어도 처음 만나는 요소 반환
+      //const h1 = document.getElementById("header");
+      const h1 = document.querySelector("#header");
+      //태그 안 text
+      console.log(h1);
+      console.log(h1.innerHTML);
+      console.log(h1.innerText);
+      console.log(h1.textContent);
+
+      //id 속성값
+      console.log(h1.id);
+      console.log(h1.classList);
+
+      //   h1.textContent = "뭐";
+      //   h1.innerHTML = "<i>HTML</i>";
+      //변경 버튼 클릭 시 h1 텍스트 변경
+      const btn = document.querySelector("[type='button']");
+      btn.addEventListener("click", (e) => {
+        console.log("이벤트 대상", e.target);
+        h1.innerHTML = "<i>HTML</i>";
+      });
+
+      const li = document.querySelector("body > ul > li:nth-child(1)");
+      console.log("li", li);
+
+      const lis = document.querySelectorAll(".item");
+      lis.forEach((e) => {
+        console.log(e);
+      });
+    </script>
+  </body>
+</html>

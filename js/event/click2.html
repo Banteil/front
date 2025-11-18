@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click2</title>
+    <style>
+      table,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+    <script>
+      const table = document.querySelector("#outside");
+      const two = table.querySelector("#t2");
+
+      table.addEventListener("click", () => {
+        two.textContent = two.textContent === "two" ? "three" : "two";
+      });
+      //table 클릭 시 two <=> three 변경되면서 나오기
+    </script>
+  </body>
+</html>
