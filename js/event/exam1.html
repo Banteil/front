@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam1</title>
+  </head>
+  <body>
+    <h2>The Light Blub</h2>
+    <div>
+      <button type="button" id="on">Turn on the light</button>
+      <img src="../img/pic_bulboff.gif" alt="Off Bulb" />
+      <button type="button" id="off">Turn off the light</button>
+    </div>
+    <script>
+      const btns = document.querySelectorAll("button");
+      const blubImg = document.querySelector("img");
+
+      //   btns[0].addEventListener("click", () => {
+      //     blubSwitch(true);
+      //   });
+
+      //   btns[1].addEventListener("click", () => {
+      //     blubSwitch(false);
+      //   });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          blubSwitch(true);
+        } else if (e.key === "ArrowRight") {
+          blubSwitch(false);
+        }
+      });
+
+      function blubSwitch(isOn) {
+        var state = isOn ? "on" : "off";
+        blubImg.src = `../img/pic_bulb${state}.gif`;
+        blubImg.alt = `${state} Bulb`;
+      }
+
+      // 이벤트 버블링
+      const div = document.querySelector("div");
+      div.addEventListener("click", (e) => {
+        // 어느 버튼에서 이벤트 발생?
+        blubSwitch(e.target.id === "on");
+      });
+    </script>
+  </body>
+</html>

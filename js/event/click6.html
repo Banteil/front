@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click6</title>
+    <style>
+      .text-danger {
+        color: red;
+        font-size: 12px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" />
+        <div class="text-danger">이름을 입력해 주세요</div>
+      </div>
+      <div>
+        <lable for="fruits">과일선택</lable>
+        <input type="checkbox" name="fruits" id="" value="사과" />사과
+        <input type="checkbox" name="fruits" id="" value="포도" />포도
+        <input type="checkbox" name="fruits" id="" value="수박" />수박
+        <input type="checkbox" name="fruits" id="" value="딸기" />딸기
+        <div class="text-danger">과일을 선택해 주세요</div>
+      </div>
+      <button type="submit">전송</button>
+    </form>
+    <script>
+      // 폼 submit 이벤트 처리
+      // 개별 요소로 처리
+      const formObj = document.querySelector("form");
+      const errMsgs = document.querySelectorAll(".text-danger");
+
+      formObj.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (formObj.name.value === "") {
+          formObj.name.focus();
+          errMsgs[0].style.display = "block";
+        } else {
+          errMsgs[0].style.display = "none";
+        }
+
+        let fruits = document.querySelectorAll("[type='checkbox']:checked");
+        if (fruits.length <= 0) {
+          errMsgs[1].style.display = "block";
+        } else {
+          errMsgs[1].style.display = "none";
+        }
+
+        //선택된 과일 가져오기
+        fruits.forEach((item) => {
+          console.log(item.value);
+        });
+      });
+
+      //   document
+      //     .querySelector("form div:nth-child(2)")
+      //     .addEventListener("click", (e) => console.log(e.target.value));
+    </script>
+  </body>
+</html>

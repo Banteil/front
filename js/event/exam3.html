@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam3</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly] {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>숫자 맞추기 게임</h3>
+    <p>
+      이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.<br />
+      숫자는 1~100 사이에 있습니다.
+    </p>
+    <form action="" method="get">
+      <div>
+        <label for="num1">숫자</label>
+        <input type="text" name="num1" id="num1" size="5" autocomplete="off" />
+        <button type="button">확인</button>
+      </div>
+      <div>
+        <label for="count">추측횟수</label>
+        <input
+          type="text"
+          name="count"
+          id="count"
+          size="5"
+          value="0"
+          readonly
+        />
+      </div>
+      <div>
+        <label for="hint">힌트</label>
+        <input type="text" name="hint" id="hint" size="30" readonly />
+      </div>
+    </form>
+    <script>
+      const btn = document.querySelector("button");
+      const countInput = document.getElementById("count");
+      const hintInput = document.getElementById("hint");
+      const rand = Math.floor(Math.random() * 100 + 1);
+      let count = 0;
+
+      const gameLogic = {
+        correct: {
+          message: `정답입니다!🎉`,
+          isGameOver: true,
+        },
+        tooHigh: {
+          message: "더 작은 숫자입니다",
+          isGameOver: false,
+        },
+        tooLow: {
+          message: "더 큰 숫자입니다",
+          isGameOver: false,
+        },
+      };
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          btn.click();
+          e.preventDefault();
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        const num = +document.getElementById("num1").value;
+        if (isNaN(num) || num < 1 || num > 100) {
+          hintInput.value = "1~100 사이의 숫자를 입력하세요";
+          return;
+        }
+
+        let logicKey = "";
+        if (num > rand) {
+          logicKey = "tooHigh";
+        } else if (num < rand) {
+          logicKey = "tooLow";
+        } else {
+          logicKey = "correct";
+        }
+        const currentLogic = gameLogic[logicKey];
+        if (currentLogic.isGameOver) {
+          btn.disabled = true;
+        } else {
+          countInput.value = ++count;
+        }
+        hintInput.value = currentLogic.message;
+      });
+    </script>
+  </body>
+</html>
