@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll1</title>
+    <style>
+      body {
+        height: 4000px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.addEventListener("scroll", () => {
+        window.scrollTo(0, 200);
+        //window.scrollBy(0, 300);
+        console.log(window.scrollY);
+      });
+    </script>
+  </body>
+</html>

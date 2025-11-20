@@ -42,3 +42,20 @@ form.addEventListener("submit", (e) => {
   }
   e.target.submit();
 });
+
+document.querySelector("a").addEventListener("click", (e) => {
+  e.preventDefault();
+  //href, target 값 가져오기
+  console.log("href ", e.target.href);
+  console.log("data-link ", e.target.dataset.linkWhat);
+  console.log(
+    "getAttribute : data-link ",
+    e.target.getAttribute("data-link-what")
+  );
+
+  // if (e.target.href.includes("naver")) {
+  //   location.href = e.target.href;
+  // } else {
+  //   location.href = "https://www.google.com";
+  // }
+});

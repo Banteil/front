@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll3</title>
+    <style>
+      div {
+        height: 150px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vitae
+      eveniet obcaecati architecto repudiandae, cum sit odit dolor numquam
+      ratione fugit rerum accusantium soluta voluptates earum, autem maxime,
+      error ex. Nesciunt repellendus ratione, consectetur ut, quod modi
+      inventore deleniti, delectus minus atque asperiores iste vitae harum odit
+      eveniet! Similique explicabo iure ex animi? Tenetur suscipit voluptatum
+      nisi qui totam at alias possimus cumque laboriosam laudantium ab autem
+      consectetur similique neque porro, reprehenderit fuga maiores a optio
+      itaque quaerat mollitia doloremque vel! Quibusdam officiis debitis ab
+      magni. At impedit dignissimos mollitia nihil similique nam assumenda
+      veritatis iusto ullam blanditiis cumque nisi obcaecati magni provident
+      excepturi et beatae facilis, nulla quam qui dolorem dolor autem totam.
+      Vitae quo saepe itaque possimus quibusdam nihil, officiis dolore? Omnis
+      nesciunt hic illum nulla cupiditate obcaecati alias repellendus earum
+      eaque consectetur temporibus consequatur aliquam dignissimos sunt
+      laboriosam ullam ipsum, ad dolores id? Cumque odit id architecto, itaque
+      illum iusto laudantium? Ratione recusandae, laborum quibusdam ullam magnam
+      quidem fugiat exercitationem? Illum eum temporibus ab asperiores,
+      voluptatum harum explicabo repellendus ipsam incidunt minus numquam saepe
+      tempora quis architecto nobis quas, magni dolores modi molestiae, a quam
+      ex labore obcaecati commodi. Labore ad, modi ab ut placeat eaque
+      reprehenderit?
+    </div>
+    <script>
+      const div = document.querySelector("div");
+      let isRead = false;
+      console.log("div.scrollHeight ", div.scrollHeight);
+      div.addEventListener("scroll", (e) => {
+        console.log("div.clientHeight ", div.clientHeight + div.scrollTop);
+        if (div.scrollHeight <= div.clientHeight + div.scrollTop && !isRead) {
+          alert("회원 약관을 읽었어유");
+          isRead = true;
+        }
+      });
+    </script>
+  </body>
+</html>

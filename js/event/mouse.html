@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+    <style>
+      p {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Mouse Over me!!</p>
+    <script>
+      //p요소에 마우스가 올려졌을 때 글자색 빨강, 내려가면 원래대로 검정
+      const pTag = document.querySelector("p");
+      pTag.addEventListener("mouseover", (e) => {
+        e.target.style.color = "red";
+      });
+
+      pTag.addEventListener("mouseleave", (e) => {
+        e.target.style.color = "black";
+      });
+    </script>
+  </body>
+</html>

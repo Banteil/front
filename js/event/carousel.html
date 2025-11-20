@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <style>
+      .container {
+        width: 300px;
+        height: 150px;
+        border: 2px solid orange;
+        overflow: hidden;
+      }
+      .wrap {
+        width: 600px;
+        height: 150px;
+        display: flex;
+        translate: translate(0);
+        transition: all 0.5s;
+      }
+      .box {
+        width: 300px;
+        height: 150px;
+        /* float: left; */
+      }
+      .box1 {
+        background-color: red;
+      }
+      .box2 {
+        background-color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="box box1">Box1</div>
+        <div class="box box2">Box2</div>
+      </div>
+    </div>
+    <div class="btn-area">
+      <button type="button" class="prev">이전</button>
+      <button type="button" class="next">다음</button>
+    </div>
+    <script src="./carousel.js"></script>
+  </body>
+</html>

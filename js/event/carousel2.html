@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .carousle-wrapper {
+        overflow: hidden;
+      }
+      .carousel {
+        width: 300vw;
+        transform: translate(0);
+        transition: all 1s;
+        display: flex;
+      }
+      .slide-box {
+        width: 100vw;
+        height: 45vw;
+      }
+      .slide-box img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousle-wrapper">
+      <div class="carousel">
+        <div class="slide-box"><img src="../img/shirt1.jpg" alt="" /></div>
+        <div class="slide-box"><img src="../img/shirt2.jpg" alt="" /></div>
+        <div class="slide-box"><img src="../img/shirt3.jpg" alt="" /></div>
+      </div>
+    </div>
+    <div class="btn-area">
+      <button type="button" class="prev">이전</button>
+      <button type="button" class="next">다음</button>
+    </div>
+    <script src="./carousel2.js"></script>
+  </body>
+</html>

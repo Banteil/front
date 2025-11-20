@@ -1,0 +1,75 @@
+/* ------------------------------------ */
+/* 1. 공통 스타일 */
+/* ------------------------------------ */
+body {
+  background-color: #f8f9fa;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------------------------ */
+/* 2. 탭 버튼 스타일 (.list, .tab-button) */
+/* ------------------------------------ */
+
+.list {
+  list-style: none; /* 리스트 기본 점 제거 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 자식 요소(li)를 가로로 정렬 */
+  border-bottom: 2px solid #dee2e6; /* 탭 영역 아래에 구분선 */
+}
+
+.tab-button {
+  padding: 12px 20px;
+  margin-right: 2px;
+  cursor: pointer;
+  background-color: #e9ecef; /* 비활성 탭 배경색 */
+  border: 1px solid #dee2e6;
+  border-bottom: none; /* 아래쪽 테두리는 구분선에 맡김 */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transition: background-color 0.2s;
+  font-weight: 500;
+  color: #495057;
+}
+
+.tab-button:hover {
+  background-color: #d8dbe0; /* 마우스 오버 시 색상 변화 */
+}
+
+/* 선택된 탭 버튼 (JavaScript로 active 클래스가 추가됨) */
+.tab-button.active {
+  border-top: 2px solid orange;
+  background-color: #fff; /* 활성 탭은 배경을 흰색으로 */
+  color: #0d6efd; /* 강조 색상 */
+  border-bottom: 2px solid #fff; /* 활성 탭 아래의 구분선을 흰색으로 덮어버림 */
+  /* font-weight: bold; */
+}
+
+/* ------------------------------------ */
+/* 3. 탭 콘텐츠 스타일 (.tab-content) */
+/* ------------------------------------ */
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-top: none; /* 탭 버튼과 연결된 느낌을 주기 위해 윗 테두리 제거 */
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #fff;
+  /* 🌟 기본적으로 모든 콘텐츠를 숨깁니다. 🌟 */
+  display: none;
+}
+
+/* 🌟 활성화된 콘텐츠만 보이게 함 (JavaScript로 show 클래스가 추가됨) */
+.tab-content.show {
+  display: block;
+}
