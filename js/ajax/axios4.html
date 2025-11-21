@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axios4</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        background-color: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+        cursor: pointer;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse; /* 셀 경계선을 하나로 합칩니다 */
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2; /* 헤더 배경색 */
+        font-weight: bold;
+        color: #333;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9; /* 짝수 행 배경색 */
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const container = document.querySelector(".container");
+      container.addEventListener("click", (e) => handleMenuClick(e));
+      const menus = container.querySelectorAll("li");
+
+      function handleMenuClick(e) {
+        const clickedElement = e.target;
+        if (clickedElement.matches("li")) {
+          const index = Array.from(menus).indexOf(clickedElement);
+          switch (index) {
+            case 1:
+              getVersion2();
+              break;
+            case 2:
+              getUsers();
+              break;
+          }
+        }
+      }
+
+      function getVersion2() {
+        axios
+          .get("https://Banteil.github.io/data/version2.json")
+          .then((response) => {
+            let result = `<ul>`;
+            response.data.forEach((item) => {
+              result += `<li>version : ${item.version}</li>`;
+              result += `<li>codename : ${item.codename}</li>`;
+            });
+            result += `</ul>`;
+            document
+              .querySelector("div")
+              .insertAdjacentHTML("afterbegin", result);
+          });
+      }
+
+      function getUsers() {
+        axios
+          .get("https://jsonplaceholder.typicode.com/users")
+          .then((response) => {
+            let result = `<table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Street Address</th></tr></thead><tbody>`;
+            response.data.forEach((item) => {
+              result += `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.email}</td><td>${item.address.street}</td></tr>`;
+            });
+            result += `</tbody></table>`;
+            document
+              .querySelector("div")
+              .insertAdjacentHTML("afterbegin", result);
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch1</title>
+  </head>
+  <body>
+    <script>
+      //   fetch("데이터 서버 주소")
+      //     .then("데이터 도착 여부 확인, 데이터 타입 변환")
+      //     .then("변환된 데이터 처리")
+      //     .catch("오류가 발생했을 때 예외 처리")
+      //     .finally("무조건 실행");
+      fetch("https://jsonplaceholder.typicode.com/todos/1")
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          const jsonString = JSON.stringify(json);
+
+          let result = `<ul>`;
+          result += `<li>userId : ${json.userId}</li>`;
+          result += `<li>id : ${json.id}</li>`;
+          result += `<li>title : ${json.title}</li>`;
+          result += `<li>completed : ${json.completed}</li>`;
+          result += `</ul>`;
+
+          document.writeln(result);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch5</title>
+  </head>
+  <body>
+    <script>
+      function getData(callbackFn) {
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+          .then((response) => response.json())
+          .then((data) => callbackFn(data));
+      }
+      function getData2(callbackFn2) {
+        fetch("https://jsonplaceholder.typicode.com/todos/")
+          .then((response) => response.json())
+          .then((data) => callbackFn2(data));
+      }
+
+      getData((data) => {
+        console.log(data);
+        getData2((data) => {
+          console.log(data);
+        });
+      });
+    </script>
+  </body>
+</html>

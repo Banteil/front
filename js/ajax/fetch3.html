@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        background-color: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      fetch("https://Banteil.github.io/data/version.json")
+        .then((response) => response.json())
+        .then((json) => {
+          const jsonString = JSON.stringify(json);
+          document.querySelector("li").addEventListener("click", () => {
+            let result = `<ul>`;
+            result += `<li>version : ${json.version}</li>`;
+            result += `<li>codename : ${json.codename}</li>`;
+            result += `</ul>`;
+            document
+              .querySelector("div")
+              .insertAdjacentHTML("afterbegin", result);
+          });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axios3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        background-color: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      document.querySelector("li").addEventListener("click", () => {
+        console.log("cc");
+        axios
+          .get("https://Banteil.github.io/data/version.json")
+          .then((response) => {
+            console.log(response);
+            let result = `<ul>`;
+            result += `<li>version : ${response.data.version}</li>`;
+            result += `<li>codename : ${response.data.codename}</li>`;
+            result += `</ul>`;
+            document
+              .querySelector("div")
+              .insertAdjacentHTML("afterbegin", result);
+          });
+      });
+    </script>
+  </body>
+</html>

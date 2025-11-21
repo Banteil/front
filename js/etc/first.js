@@ -2,12 +2,21 @@
 // 변수에 할당
 // 다른 함수의 인자, 리턴값으로 사용
 
-const func1 = () => {
-  console.log("변수 할당");
-};
+// const func1 = () => {
+//   console.log("변수 할당");
+// };
 
-function logText(msg) {
-  msg();
+// function logText(msg) {
+//   msg();
+// }
+
+// logText(func1);
+
+function add(x) {
+  return function (y) {
+    return x + y;
+  };
 }
 
-logText(func1);
+const sum = add(5);
+console.log(sum(10));
