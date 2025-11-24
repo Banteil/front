@@ -30,22 +30,16 @@ function initialize() {
  * @param {string} targetDt 조회할 날짜 (YYYYMMDD)
  */
 function getMovieInfo(targetDt) {
-  fetch(
-    `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${key}&targetDt=${targetDt}`
-  )
+  const url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${key}&targetDt=${targetDt}`;
+  axios
+    .get(url)
     .then((response) => {
-      if (!response.ok) {
-        throw new Error("네트워크 응답 실패");
-      }
-      return response.json();
-    })
-    .then((data) => {
       const existingTable = msgDiv.querySelector("table");
       if (existingTable) {
         existingTable.remove(); // 기존 테이블 요소를 DOM에서 삭제
       }
 
-      const movieData = data.boxOfficeResult.dailyBoxOfficeList;
+      const movieData = response.data.boxOfficeResult.dailyBoxOfficeList;
       let tableHTML = `
             <table>
                 <thead>
@@ -106,15 +100,10 @@ function getMovieInfo(targetDt) {
 function getMovieDetail(movieCd) {
   const url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=${key}&movieCd=${movieCd}`;
 
-  fetch(url)
+  axios
+    .get(url)
     .then((response) => {
-      if (!response.ok) {
-        throw new Error("네트워크 응답 실패");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      const movieInfo = data.movieInfoResult.movieInfo;
+      const movieInfo = response.data.movieInfoResult.movieInfo;
       movieInfoPopup(movieInfo);
     })
     .catch((error) => {

@@ -62,3 +62,13 @@ h3,
 #msg tr:nth-child(even) {
   background-color: #f7f7f7;
 }
+
+.movie-cd {
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 모양으로 변경 */
+  text-decoration: underline; /* 밑줄 추가 */
+  color: blue; /* 색상 변경 */
+}
+
+.movie-cd:hover {
+  color: darkblue; /* 호버 시 색상 변경 */
+}
